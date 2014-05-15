@@ -1,0 +1,141 @@
+/en/san_fancisco,population,825000
+/en/fuod,friends_with,/en/paul
+/en/fuod,friends_with,/en/winona
+/en/fuod,name,Fuod Ramseys
+/en/fuod,lives_in,/en/chicago
+/en/fuod,likes,/en/scotch
+/en/chicago,inside,/en/illinois
+/en/chicago,name,Chicago
+/en/chicago,population,2700000
+/en/chicago,mayor,Al Capone's ghost
+/en/chicago,murder_rate,9.72
+/en/greece,name,Greece
+/en/greece,inside,Europe
+/en/greece,population,11000000
+/en/doodoos,inside,/en/san_francisco
+/en/doodoos,name,Doo Doos Hot Dogs
+/en/doodoos,address,"600 7th Avenue, San Francisco, CA 94118"
+/en/doodoos,is_a,restaurant
+/en/doodoos,cost,cheap
+/en/doodoos,latitude,37.777158
+/en/doodoos,longitude,-122.465068
+/en/democratic,name,Democratic Party
+wilson,is,lame
+wilson,is,a_dork
+/rel1,start,2001
+/rel1,end,2003
+/rel1,with,/en/paul
+/rel1,with,/en/fuod
+/rel2,start,2005
+/rel2,end,2012
+/rel2,with,/en/paul
+/rel2,with,/en/larry
+/en/san_francisco,inside,/en/california
+/en/san_francisco,name,San Francisco
+/en/san_francisco,mayor,/en/ed_lee
+/rehab1,name,Betty Ford
+/rehab1,start,2005
+/rehab1,end,2006
+/rehab1,person,/en/paul
+/rehab1,person,/en/larry
+/en/val_kilmer,name,Val Kilmer
+/en/top_gun,name,Top Gun
+/en/top_gun,starring,/en/tom_cruise
+/en/top_gun,starring,/en/val_kilmer
+/en/jehovas,inside,/en/san_francisco
+/en/jehovas,name,Jehova's Witnesses
+/en/jehovas,address,"2500 Fulton Street, San Francisco, CA 94118"
+/en/jehovas,is_a,tourist_attraction
+/en/jehovas,latitude,37.774547
+/en/jehovas,longitude,-122.458702
+/en/tom_cruise,name,Tom Cruise
+/en/a_few_good_men,name,A Few Good Men
+/en/a_few_good_men,starring,/en/tom_cruise
+/en/a_few_good_men,starring,/en/kevin_bacon
+/en/a_few_good_men,directed_by,/en/rob_reiner
+/en/katias_russian_tea_room,inside,/en/san_francisco
+/en/katias_russian_tea_room,name,Katia's Russian Tea Room
+/en/katias_russian_tea_room,address,"600 5th Avenue, San Francisco, CA 94118"
+/en/katias_russian_tea_room,is_a,restaurant
+/en/katias_russian_tea_room,cost,expensive
+/en/katias_russian_tea_room,latitude,37.777159
+/en/katias_russian_tea_room,longitude,-122.462693
+/en/ed_lee,name,Ed Lee
+/en/larry,name,Larry Schmiegal
+/en/larry,likes,/en/beer
+/en/larry,hates,/en/scotch
+/en/larry,lives_in,/en/los_angeles
+/en/larry,address,"1535 Vine Street, Los Angeles, CA 90028"
+/en/larry,latitude,34.098621
+/en/larry,longitude,-118.326683
+/en/apollo_13,name,Apollo 13
+/en/apollo_13,starring,/en/kevin_bacon
+/en/apollo_13,starring,/en/tom_hanks
+/en/california,inside,/en/usa
+/en/california,name,California
+/en/europe,name,Europe
+/en/tom_hanks,name,Tom Hanks
+/en/san_diego,inside,/en/california
+/en/san_diego,name,San Diego
+/en/san_diego,population,1300000
+/en/mcdernals,inside,/en/san_francisco
+/en/mcdernals,name,Mcdernals Fish House
+/en/mcdernals,address,"600 6th Avenue, San Francisco, CA 94118"
+/en/mcdernals,is_a,restaurant
+/en/mcdernals,cost,cheap
+/en/mcdernals,latitude,37.777210
+/en/mcdernals,longitude,-122.463994
+/en/paul,latitude,37.775933
+/en/paul,is_not,human
+/en/paul,address,"666 8th Ave, San Francisco, CA"
+/en/paul,likes,/en/scotch
+/en/paul,likes,/en/scooters
+/en/paul,has,hands
+/en/paul,friends_with,/en/larry
+/en/paul,friends_with,/en/fuod
+/en/paul,loves,/en/scotch
+/en/paul,name,Pavlos
+/en/paul,lives_in,/en/san_francisco
+/en/paul,longitude,-122.465737
+/en/illinois,inside,/en/usa
+/en/illinois,name,Illinois
+/en/republican,name,Republican Party
+/en/winona,friends_with,/en/fuod
+/en/winona,name,Winona Winone
+/en/winona,lives_in,san_francisco
+/en/winona,address,"661 8th Ave, San Francisco, CA"
+/en/winona,latitude,37.775931
+/en/winona,longitude,-122.466092
+/en/beer,is,carbonated
+/en/china,name,China
+/en/china,inside,/en/asia
+/en/asia,name,Asia
+/en/kevin_bacon,name,Kevin Bacon
+/en/scotch,is,good
+/en/rob_reiner,name,Rob Reiner
+/en/eric_garcetti,name,Eric Garcetti
+/en/eric_garcetti,born,1971
+/en/eric_garcetti,party,/en/democratic
+murder_rate,name,Murder Rate
+murder_rate,per_capita,100000
+/en/taco_hut,inside,/en/san_francisco
+/en/taco_hut,name,Fuods Taco and Pizza Shop With Free Pudding
+/en/taco_hut,address,"600 4th Avenue, San Francisco, CA 94118"
+/en/taco_hut,is_a,restaurant
+/en/taco_hut,cost,midrange
+/en/taco_hut,latitude,37.777304
+/en/taco_hut,longitude,-122.461827
+/en/usa,name,United States of America
+/en/att_ballpark,inside,/en/san_francisco
+/en/att_ballpark,name,AT&T Park
+/en/att_ballpark,address,"24 Willie Mays Plaza, San Francisco, CA 94107"
+/en/att_ballpark,is_a,tourist_attraction
+/en/att_ballpark,latitude,37.778143
+/en/att_ballpark,longitude,-122.390872
+/en/athens,name,Athens
+/en/athens,inside,/en/greece
+/en/athens,population,3370000
+/en/los_angeles,inside,/en/california
+/en/los_angeles,name,Los Angeles
+/en/los_angeles,mayor,/en/eric_garcetti
+/en/los_angeles,population,3800000

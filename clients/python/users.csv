@@ -1,0 +1,30 @@
+_:1,foaf:email,a@a.com
+_:1,foaf:name,Bubba Hotep
+_:1,foaf:knows,_:2
+_:1,rdf:type,foaf:Person
+_:1,address,"666 8th ave, san francisco, ca, 94118"
+_:1,latitude,37.775933
+_:1,longitude,-122.465737
+_:2,foaf:email,b@a.com
+_:2,foaf:name,Larry Wiesel
+_:2,foaf:knows,_:4
+_:2,rdf:type,foaf:Person
+_:2,address,"669 8th ave, san francisco, ca, 94118"
+_:2,latitude,37.775860
+_:2,longitude,-122.466087
+_:3,foaf:email,c@a.com
+_:3,foaf:name,Winona Tree
+_:3,foaf:knows,_:1
+_:3,rdf:type,foaf:Person
+_:3,address,"611 7th ave, san francisco, ca, 94118"
+_:3,latitude,37.776892
+_:3,longitude,-122.465309
+_:4,foaf:email,d@a.com
+_:4,foaf:name,Carla Hagel
+_:4,foaf:knows,_:1
+_:4,rdf:type,foaf:Person
+_:4,address,"610 7th ave, san francisco, ca, 94118"
+_:4,latitude,37.776918
+_:4,longitude,-122.464774
+_:5,foaf:knows,_:1
+_:5,foaf:name,wilson
