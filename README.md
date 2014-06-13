@@ -8,7 +8,7 @@
 
 ---
 
-[API](https://github.com/pkar/pfftdb/blob/master/api.go)
+[API](https://github.com/pkar/pfftdb/blob/master/API.md)
 
 ---
 
