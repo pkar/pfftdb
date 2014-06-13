@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	httpApiPort := flag.String("httpApiPort", "6666", "port for the http api")
+	httpApiPort := flag.String("httpApiPort", "9666", "port for the http api")
 	env := flag.String("env", "development", "environment")
 	webDir := flag.String("webDir", "", "web directory for graph visualization, src/web")
 	dbType := flag.String("dbType", "mongo", "mongo or postgres(not currently implemented)")

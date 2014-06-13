@@ -2,6 +2,32 @@ import client
 import pprint
 db = client.Pfft("127.0.0.1:9666", "user")
 
+db.add([
+  ["foaf:Person", "rdf:type", "owl:SymmetricProperty"],
+
+  ["user:1", "user:loggedIn", True],
+  ["user:1", "foaf:mbox", "a@a.com"],
+  ["user:1", "foaf:name", "Larry Lipshitz"],
+  ["user:1", "user:facebook", "fb:1"],
+  ["user:1", "user:pref", "_:1"],
+  ["user:1", "rdf:type", "foaf:Person"],
+  ["user:1", "address", "25 Lusk Street, San Francisco, CA 94107"],
+  ["_:1", "item:id", "item:1"],
+  ["_:1", "item:val", 1],
+  ["user:1", "user:pref", "_:2"],
+  ["_:2", "item:id", "item:2"],
+  ["_:2", "item:val", 0],
+  ["fb:1", "fb:email", "a@facebook.com"],
+  ["fb:1", "fb:like", "resource1"],
+  ["fb:1", "fb:like", "resource2"],
+  ["fb:1", "fb:token", "someaccesstoken"],
+
+  ["user:2", "rdf:type", "foaf:Person"],
+  ["user:2", "foaf:knows", "user:1"],
+  ["user:2", "address", "500 Howard Street, San Francisco, CA 94107"],
+])
+
+
 # show all triples
 print db.triples("", "", "")
 

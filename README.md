@@ -12,7 +12,7 @@
 
 ---
 
-## Running
+## Running the server
 
 ```bash
 cd project
@@ -27,6 +27,15 @@ go get github.com/pkar/pfftdb
 go get labix.org/v2/mgo
 
 go run src/github.com/pkar/pfftdb/example/full/main.go -logtostderr -webDir="$(pwd)/src/github.com/pkar/pfftdb/web/"
+
+```
+
+---
+
+## Running example data load
+```bash
+cd src/github.com/pkar/pfftdb/clients/python/
+python example.py
 
 ```
 

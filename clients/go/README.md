@@ -12,7 +12,7 @@ import (
 
 func main() {
 	// Connect
-	c, err := client.NewClient("localhost:6666")
+	c, err := client.NewClient("localhost:9666")
 	if err != nil {
 		log.Fatal(err)
 	}
