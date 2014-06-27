@@ -25,6 +25,7 @@ mongod
 
 go get github.com/pkar/pfftdb
 go get labix.org/v2/mgo
+go get github.com/golang/glog
 
 go run src/github.com/pkar/pfftdb/example/full/main.go -logtostderr -webDir="$(pwd)/src/github.com/pkar/pfftdb/web/"
 

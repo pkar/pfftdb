@@ -11,7 +11,7 @@ import (
 	log "github.com/golang/glog"
 )
 
-// API
+// API ...
 type API struct {
 	Env    string
 	Port   string
@@ -70,7 +70,7 @@ type ValueRequest struct {
 	Obj    interface{}       `json:"obj"`
 }
 
-// ValueResponse is whats returned from the triples endpoint.
+// ValueResponse is whats returned from the value endpoint.
 type ValueResponse struct {
 	Graph string      `json:"graph"`
 	Data  interface{} `json:"data"`
@@ -103,14 +103,14 @@ type QueryCountResponse struct {
 	Data    uint `json:"data"`
 }
 
-// PathResponse
+// PathResponse returns a path for given query.
 type PathResponse struct {
 	Graph  string            `json:"graph"`
 	Prefix map[string]string `json:"prefix"`
 	Data   []string          `json:"data"`
 }
 
-// PrefixMap replaces in place defined prefixes in a set of triples
+// PrefixMap replaces in place defined prefixes in a set of triples.
 func PrefixMap(prefixes map[string]string, triples []*Triple) {
 	for prefix, replace := range prefixes {
 		for i, triple := range triples {
@@ -127,7 +127,7 @@ func PrefixMap(prefixes map[string]string, triples []*Triple) {
 	}
 }
 
-// PrefixMapTriples replaces in place defined prefixes in sub, pred and obj
+// PrefixMapTriple replaces in place defined prefixes in sub, pred and obj
 func PrefixMapTriple(prefixes map[string]string, sub, pred string, obj interface{}) (string, string, interface{}) {
 	for prefix, replace := range prefixes {
 		if strings.HasPrefix(sub, prefix+":") {
@@ -173,7 +173,6 @@ func (a *API) IndexHandler(w http.ResponseWriter, req *http.Request) {
 		http.Error(w, "no request body", http.StatusBadRequest)
 		return
 	}
-	defer req.Body.Close()
 
 	if req.Method != "POST" {
 		e := methodNotAllowed(req.Method)
@@ -204,13 +203,12 @@ func (a *API) IndexHandler(w http.ResponseWriter, req *http.Request) {
 	}
 }
 
-// DropHandler indexes a graph.
+// DropHandler removes a graph.
 func (a *API) DropHandler(w http.ResponseWriter, req *http.Request) {
 	if req.Body == nil {
 		http.Error(w, "no request body", http.StatusBadRequest)
 		return
 	}
-	defer req.Body.Close()
 
 	if req.Method != "POST" {
 		e := methodNotAllowed(req.Method)
@@ -238,12 +236,8 @@ func (a *API) DropHandler(w http.ResponseWriter, req *http.Request) {
 	fmt.Fprint(w, "OK")
 }
 
-// GraphsHandler returns a current list of graphs created.
+// GraphsListHandler returns a current list of graphs created.
 func (a *API) GraphsListHandler(w http.ResponseWriter, req *http.Request) {
-	if req.Body != nil {
-		defer req.Body.Close()
-	}
-
 	if req.Method != "GET" {
 		e := methodNotAllowed(req.Method)
 		log.Error(e)
@@ -280,7 +274,6 @@ func (a *API) DataHandler(w http.ResponseWriter, req *http.Request) {
 		http.Error(w, "no request body", http.StatusBadRequest)
 		return
 	}
-	defer req.Body.Close()
 
 	body, err := ioutil.ReadAll(req.Body)
 	if err != nil {
@@ -351,7 +344,6 @@ func (a *API) ValueHandler(w http.ResponseWriter, req *http.Request) {
 		http.Error(w, "no request body", http.StatusBadRequest)
 		return
 	}
-	defer req.Body.Close()
 
 	if req.Method != "POST" {
 		e := methodNotAllowed(req.Method)
@@ -414,7 +406,6 @@ func (a *API) TriplesHandler(w http.ResponseWriter, req *http.Request) {
 		http.Error(w, "no request body", http.StatusBadRequest)
 		return
 	}
-	defer req.Body.Close()
 
 	if req.Method != "POST" {
 		e := methodNotAllowed(req.Method)
@@ -481,7 +472,6 @@ func (a *API) TriplesCountHandler(w http.ResponseWriter, req *http.Request) {
 		http.Error(w, "no request body", http.StatusBadRequest)
 		return
 	}
-	defer req.Body.Close()
 
 	if req.Method != "POST" {
 		e := methodNotAllowed(req.Method)
@@ -543,7 +533,6 @@ func (a *API) QueryHandler(w http.ResponseWriter, req *http.Request) {
 		http.Error(w, "no request body", http.StatusBadRequest)
 		return
 	}
-	defer req.Body.Close()
 
 	if req.Method != "POST" {
 		e := methodNotAllowed(req.Method)
@@ -622,12 +611,12 @@ func (a *API) QueryHandler(w http.ResponseWriter, req *http.Request) {
 	return
 }
 
+// InferenceHandler ...
 func (a *API) InferenceHandler(w http.ResponseWriter, req *http.Request) {
 	if req.Body == nil {
 		http.Error(w, "no request body", http.StatusBadRequest)
 		return
 	}
-	defer req.Body.Close()
 
 	if req.Method != "PUT" {
 		e := methodNotAllowed(req.Method)
@@ -664,7 +653,6 @@ func (a *API) PathHandler(w http.ResponseWriter, req *http.Request) {
 		http.Error(w, "no request body", http.StatusBadRequest)
 		return
 	}
-	defer req.Body.Close()
 
 	if req.Method != "GET" {
 		e := methodNotAllowed(req.Method)
@@ -736,7 +724,7 @@ func (a *API) Close() {
 
 }
 
-// New creates an api server, it runs with a.Run() in a separate goroutine.
+// NewAPI creates an api server, it runs with a.Run() in a separate goroutine.
 func NewAPI(port, env, webDir string, driver Driver) (*API, error) {
 	a := &API{
 		Env:    env,
