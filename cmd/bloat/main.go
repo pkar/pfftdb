@@ -6,6 +6,7 @@ import (
 
 	log "github.com/golang/glog"
 	"github.com/pkar/pfftdb"
+	"github.com/pkar/pfftdb/clients/go"
 )
 
 func userTriples(id string) []*pfftdb.Triple {
