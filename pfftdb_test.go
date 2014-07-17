@@ -60,7 +60,7 @@ func init() {
 }
 
 func TestNewDriver(t *testing.T) {
-	dbConf := &DBConf{Hosts: "localhost:27017"}
+	dbConf := &DBConf{Hosts: DBPATH}
 	_, err := NewDriver("mongo", dbConf)
 	if err != nil {
 		t.Fatal(err)
