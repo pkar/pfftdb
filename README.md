@@ -1,4 +1,5 @@
 # pfftdb
+[![wercker status](https://app.wercker.com/status/5f13e85063356a0bc5aeca7cf11a5f8a/m "wercker status")](https://app.wercker.com/project/bykey/5f13e85063356a0bc5aeca7cf11a5f8a)
 
 1. An expression of dismissal of another's comment. 
 2. The sound of a silent and deadly rectal emission.
