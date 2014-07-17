@@ -3,6 +3,7 @@ package client
 import (
 	"fmt"
 	"log"
+	"os"
 	"testing"
 
 	"github.com/pkar/pfftdb"
@@ -13,19 +14,24 @@ const (
 	env         = "testing"
 	dbType      = "mongo"
 	dbName      = "test"
-	dbPath      = "localhost"
 	dbUser      = ""
 	dbPass      = ""
 	TESTGRAPH   = "test"
 )
 
 var (
-	store *pfftdb.Store
-	cl    *Client
+	dbPath = "localhost"
+	store  *pfftdb.Store
+	cl     *Client
 )
 
 func init() {
 	var err error
+	dbpath := os.Getenv("DBPATH")
+	if dbpath != "" {
+		dbPath = dbpath
+	}
+
 	store, err = pfftdb.New(httpAPIPort, env, dbType, dbPath, dbName, dbUser, dbPass, TESTGRAPH, "")
 	if err != nil {
 		log.Fatal(err)
