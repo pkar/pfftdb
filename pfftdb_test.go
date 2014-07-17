@@ -8,17 +8,18 @@ import (
 )
 
 const (
-	APIPORT    = "9998"
+	DBNAME     = "test"
+	DBUSER     = ""
+	DBPASS     = ""
 	ENV        = "testing"
 	TESTGRAPH  = "test"
 	TESTGRAPH2 = "test2"
-	DBUSER     = ""
-	DBPASS     = ""
-	DBPATH     = "localhost"
-	DBNAME     = "test"
 )
 
 var (
+	DBPATH  = "localhost"
+	APIPORT = "9998"
+
 	goPath = fmt.Sprintf("%s", os.Getenv("GOPATH"))
 	dbType = "mongo"
 	webDir = ""
@@ -31,6 +32,15 @@ var (
 
 func init() {
 	var err error
+	dbpath := os.Getenv("DBPATH")
+	if dbpath != "" {
+		DBPATH = dbpath
+	}
+	apiport := os.Getenv("APIPORT")
+	if dbpath != "" {
+		APIPORT = apiport
+	}
+
 	STORE, err = New(APIPORT, ENV, dbType, DBPATH, DBNAME, DBUSER, DBPASS, TESTGRAPH, webDir)
 	if err != nil {
 		log.Fatal(err)

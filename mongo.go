@@ -252,7 +252,7 @@ func (m *Mongo) Connect(hosts string) {
 	log.Infof("connecting session to hosts:%s", hosts)
 
 	for {
-		session, err := mgo.DialWithTimeout(m.Hosts, 60*time.Second)
+		session, err := mgo.DialWithTimeout(m.Hosts, 10*time.Second)
 		if err != nil {
 			log.Error(err)
 			time.Sleep(time.Second)

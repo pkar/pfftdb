@@ -2,6 +2,7 @@ package pfftdb
 
 import (
 	"log"
+	"os"
 	"reflect"
 	"testing"
 
@@ -9,19 +10,21 @@ import (
 	//"labix.org/v2/mgo/bson"
 )
 
-const (
-	MONGOHOSTS = "localhost:27017"
-)
-
 var (
-	db       *mgo.Database
-	MONGO    *Mongo
-	TESTCOL  *mgo.Collection
-	TESTCOL2 *mgo.Collection
+	MONGOHOSTS = "localhost:27017"
+	db         *mgo.Database
+	MONGO      *Mongo
+	TESTCOL    *mgo.Collection
+	TESTCOL2   *mgo.Collection
 )
 
 func init() {
 	var err error
+	dbpath := os.Getenv("DBPATH")
+	if dbpath != "" {
+		MONGOHOSTS = dbpath
+	}
+
 	MONGO, err = NewMongo(MONGOHOSTS, "test", []string{"test", "test2"})
 	if err != nil {
 		log.Fatal(err)
